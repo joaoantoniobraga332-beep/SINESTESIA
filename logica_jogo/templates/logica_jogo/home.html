@@ -1,2 +1,37 @@
-<h1>Bem-vindo ao jogo de cores</h1>
-<a href="/jogar/">Começar jogo</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinestesia — Início</title>
+    <link rel="stylesheet" href="{% static 'logica_jogo/estilo.css' %}">
+</head>
+<body class="win98-bg">
+
+<div class="window">
+    <div class="title-bar">
+        <div class="title">JA1</div>
+        <div class="title-buttons">
+            <button class="btn-min">_</button>
+            <button class="btn-max">□</button>
+            <button class="btn-close">X</button>
+        </div>
+    </div>
+
+    <div class="window-body">
+        <h2>(⊙.⊙)!!SINESTESIA!!(⊙.⊙)</h2>
+        <p>um jogo sobre associação cromática</p>
+
+        <a href="/jogo/" class="win-button">(＾∇＾)INICIAR(＾∇＾)</a>
+    </div>
+
+    <div class="window-body">
+        <h2>(☆^ー^☆)!!JA1 DEV!!(☆^ー^☆)</h2>
+        <p>+++ projetos e outras coisas também!</p>
+
+        <a href="https://github.com/joaoantoniobraga332-beep" class="win-button">👉Github👈</a>
+    </div>
+</div>
+
+</body>
+</html>

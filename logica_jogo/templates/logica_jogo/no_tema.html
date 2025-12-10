@@ -1,3 +1,30 @@
-<h1>Nenhum tema do dia foi configurado.</h1>
-<p>Cadastre pelo admin.</p>
-<a href="/">Voltar</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sem tema — Sinestesia</title>
+    <link rel="stylesheet" href="{% static 'logica_jogo/estilo.css' %}">
+</head>
+<body class="win98-bg">
+
+<div class="window">
+    <div class="title-bar">
+        <div class="title">JA1</div>
+        <div class="title-buttons">
+            <button class="btn-min">_</button>
+            <button class="btn-max">□</button>
+            <button class="btn-close">X</button>
+        </div>
+    </div>
+
+    <div class="window-body">
+        <h2>╥﹏╥Nenhum tema pra hoje╥﹏╥</h2>
+        <p>ಥ_ಥTalvez outro diaಥ_ಥ</p>
+        <a href="/" class="win-button">Voltar</a>
+    </div>
+</div>
+
+</body>
+</html>
+

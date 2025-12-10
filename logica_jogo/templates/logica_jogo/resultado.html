@@ -1,7 +1,35 @@
-<h1>Resultado</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado — Sinestesia</title>
+    <link rel="stylesheet" href="{% static 'logica_jogo/estilo.css' %}">
+</head>
+<body class="win98-bg">
 
-<p>Tema: {{ tema.nome }}</p>
-<p>Sua cor: <span style="color: {{ cor_usuario }};">{{ cor_usuario }}</span></p>
-<p>Cor correta: <span style="color: {{ cor_correta }};">{{ cor_correta }}</span></p>
+<div class="window">
+    <div class="title-bar">
+        <div class="title">JA1</div>
+        <div class="title-buttons">
+            <button class="btn-min">_</button>
+            <button class="btn-max">□</button>
+            <button class="btn-close">X</button>
+        </div>
+    </div>
 
-<a href="/">Voltar</a>
+    <div class="window-body">
+
+        <h3>Você escolheu:</h3>
+        <div class="color-box" style="background: {{ cor_usuario }};"></div>
+
+        <h3>Cor correta:</h3>
+        <div class="color-box" style="background: {{ cor_correta }};"></div>
+
+        <a href="/jogar/" class="win-button">Tente novamente(ᗒᗣᗕ)</a>
+        <a href="/" class="win-button">Voltar ao início (•̀⤙•́ )</a>
+    </div>
+</div>
+
+</body>
+</html>

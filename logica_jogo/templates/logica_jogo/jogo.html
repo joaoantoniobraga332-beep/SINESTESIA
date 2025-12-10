@@ -1,8 +1,41 @@
-<h1>Tema: {{ tema.nome }}</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogar — Sinestesia</title>
+    <link rel="stylesheet" href="{% static 'logica_jogo/estilo.css' %}">
+</head>
+<body class="win98-bg">
 
-<form method="POST">
-    {% csrf_token %}
-    <label>Escolha uma cor:</label>
-    <input type="color" name="cor">
-    <button type="submit">Enviar</button>
-</form>
+<div class="window">
+    <div class="title-bar">
+        <div class="title">JA1</div>
+        <div class="title-buttons">
+            <button class="btn-min">_</button>
+            <button class="btn-max">□</button>
+            <button class="btn-close">X</button>
+        </div>
+    </div>
+
+    <div class="window-body">
+        <h2>Tema do dia: <strong>{{ tema.nome }}</strong></h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <p>Que cor combina com o tema?¯\_(ツ)_/¯:</p>
+
+            <div class="palette">
+                {% for cor in cores %}
+                <button name="cor" value="{{ cor.hex }}" class="color-btn"
+                    style="background-color: {{ cor.hex }};"> </button>
+                {% endfor %}
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
