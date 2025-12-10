@@ -1,0 +1,8 @@
+<h1>Tema: {{ tema.nome }}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <label>Escolha uma cor:</label>
+    <input type="color" name="cor">
+    <button type="submit">Enviar</button>
+</form>
