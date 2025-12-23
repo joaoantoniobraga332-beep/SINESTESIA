@@ -20,16 +20,23 @@
 
     <div class="window-body">
         <h2>Tema do dia: <strong>{{ tema.nome }}</strong></h2>
-
-        <form method="POST">
+        
+        <form method="POST" action="{% url 'resultado' %}">
             {% csrf_token %}
+
+            <input type="hidden" name= "tema" value="{{ tema.id }}">
 
             <p>Que cor combina com o tema?¯\_(ツ)_/¯:</p>
 
             <div class="palette">
                 {% for cor in cores %}
-                <button name="cor" value="{{ cor.hex }}" class="color-btn"
-                    style="background-color: {{ cor.hex }};"> </button>
+                  <button
+                  type= "submit" 
+                  name= "cor" 
+                  value="{{ cor.hex}}"
+                  class = "color-btn"
+                  style = "background-color: {{ cor.hex }}">
+                  </button>
                 {% endfor %}
             </div>
 

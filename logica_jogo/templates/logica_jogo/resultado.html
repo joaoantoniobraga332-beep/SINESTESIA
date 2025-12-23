@@ -20,13 +20,16 @@
 
     <div class="window-body">
 
-        <h3>Você escolheu:</h3>
-        <div class="color-box" style="background: {{ cor_usuario }};"></div>
+<h2>Tema: {{ tema.nome }}</h2>
 
-        <h3>Cor correta:</h3>
-        <div class="color-box" style="background: {{ cor_correta }};"></div>
-
-        <a href="/jogar/" class="win-button">Tente novamente(ᗒᗣᗕ)</a>
+<h1 class = "result">
+{% if acertou %}
+     (͠≖ ͜ʖ͠≖)ACERTOU!(͠≖ ͜ʖ͠≖)
+{% else %}
+      :( ERROU! :(
+{% endif %}
+</h1>
+        <a href="/jogo/" class="win-button">Tente novamente(ᗒᗣᗕ)</a>
         <a href="/" class="win-button">Voltar ao início (•̀⤙•́ )</a>
     </div>
 </div>
